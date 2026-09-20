@@ -1,0 +1,1273 @@
+Base path: 'F:/UnityVersions/Unity6/6000.4.6f1/Editor/Data', plugins path 'F:/UnityVersions/Unity6/6000.4.6f1/Editor/Data/PlaybackEngines', jobs: n
+Cmd: initializeCompiler
+
+Cmd: compileSnippet
+  insize=1177 file=Packages/com.unity.ugui/Editor Resources/Shaders/TMP_SDF Internal Editor.shader name=Hidden/TMP/Internal/Editor/Distance Field SSD pass=<Unnamed Pass 0> ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW= dKW=OUTLINE_ON UNDERLAY_ON UNDERLAY_INNER UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 SHADER_API_GLES31 SHADER_API_GLES32 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=0 type=Vertex platform=d3d11 reqs=33 mask=6 start=58 ok=1 outsize=1994
+
+Cmd: initializeCompiler
+
+Cmd: initializeCompiler
+
+Cmd: compileSnippet
+  insize=4120 file=Assets/DefaultResourcesExtra/UI/UI-Default.shader name=UI/Default pass=Default ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW= dKW=UNITY_UI_CLIP_RECT UNITY_UI_ALPHACLIP UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 SHADER_API_GLES31 SHADER_API_GLES32 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=0 type=Vertex platform=d3d11 reqs=1 mask=6 start=49 ok=1 outsize=1338
+
+Cmd: compileSnippet
+  insize=1363 file=Assets/Shaders/InstancedQuad.shader name=GpuSim/InstancedQuad pass=<Unnamed Pass 0> ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW= dKW=UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 SHADER_API_GLES31 SHADER_API_GLES32 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=0 type=Fragment platform=d3d11 reqs=1101803 mask=6 start=10 ok=1 outsize=286
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24872 file=Assets/Shaders/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 2 plat 4 at GpuSim.compute(559): undeclared identifier '_SpawnCount'
+ ok=0 outsize=0
+
+Cmd: compileComputeKernel
+  insize=24957 file=Assets/Shaders/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(612): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(613): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(614): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=2923
+
+Cmd: compileComputeKernel
+  insize=24957 file=Assets/Shaders/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(98): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(612): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(613): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3280
+
+Cmd: compileComputeKernel
+  insize=24957 file=Assets/Shaders/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(612): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(613): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1651
+
+Cmd: compileComputeKernel
+  insize=24957 file=Assets/Shaders/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(612): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(613): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=998
+
+Cmd: compileComputeKernel
+  insize=24957 file=Assets/Shaders/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at (0): Shader uses 10 UAVs (0 textures and 10 buffers), which is more than the 8 maximum currently supported on D3D11.0.This is OK if you are only targeting D3D11.1 platforms
+  error: 1 plat 4 at GpuSim.compute(98): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(377): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(377): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(381): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(397): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(397): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(398): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(426): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(449): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(472): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(488): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(504): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(612): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(613): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11207
+
+Cmd: compileComputeKernel
+  insize=24957 file=Assets/Shaders/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(612): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(613): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1157
+
+Cmd: compileComputeKernel
+  insize=24957 file=Assets/Shaders/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(612): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(613): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=992
+
+Cmd: compileComputeKernel
+  insize=24957 file=Assets/Shaders/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(65): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(66): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(128): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(130): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(144): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(151): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(153): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(158): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(177): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(182): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(190): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(197): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(202): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(213): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(218): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(227): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(230): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(235): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(240): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(249): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(252): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(259): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(262): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(265): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(273): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(277): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(282): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(289): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(297): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(302): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(612): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(613): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=25903
+
+Cmd: compileComputeKernel
+  insize=23446 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(605): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(606): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(607): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=2929
+
+Cmd: compileComputeKernel
+  insize=23446 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(100): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(605): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(606): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3286
+
+Cmd: compileComputeKernel
+  insize=23446 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(605): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(606): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1629
+
+Cmd: compileComputeKernel
+  insize=23446 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(605): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(606): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=23446 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(100): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(373): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(373): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(377): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(393): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(393): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(394): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(420): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(443): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(465): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(481): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(497): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(605): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(606): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11225
+
+Cmd: compileComputeKernel
+  insize=23446 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(605): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(606): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=23446 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(605): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(606): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=992
+
+Cmd: compileComputeKernel
+  insize=23446 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(69): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(70): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(133): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(135): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(148): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(155): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(157): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(162): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(181): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(186): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(194): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(201): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(206): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(217): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(222): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(231): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(233): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(238): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(243): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(252): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(254): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(261): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(264): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(267): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(275): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(279): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(284): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(291): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(299): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(304): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(605): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(606): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=25341
+
+Cmd: compileComputeKernel
+  insize=23785 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(607): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(608): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(609): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=2929
+
+Cmd: compileComputeKernel
+  insize=23785 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(101): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(607): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(608): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3366
+
+Cmd: compileComputeKernel
+  insize=23785 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(607): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(608): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1741
+
+Cmd: compileComputeKernel
+  insize=23785 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(607): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(608): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=23785 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(101): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(375): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(375): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(379): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(395): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(395): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(396): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(422): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(445): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(467): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(483): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(499): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(607): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(608): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11417
+
+Cmd: compileComputeKernel
+  insize=23785 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(607): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(608): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=23785 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(607): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(608): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=992
+
+Cmd: compileComputeKernel
+  insize=23785 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(69): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(70): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(135): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(137): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(150): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(157): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(159): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(164): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(183): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(188): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(196): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(203): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(208): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(219): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(224): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(233): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(235): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(240): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(245): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(254): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(256): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(263): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(266): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(269): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(277): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(281): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(286): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(293): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(301): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(306): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(607): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(608): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=25341
+
+Cmd: compileSnippet
+  insize=1109 file=Assets/DefaultResourcesExtra/Sprites-Default.shader name=Sprites/Default pass=<Unnamed Pass 0> ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW= dKW=ETC1_EXTERNAL_ALPHA INSTANCING_ON PIXELSNAP_ON UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 SHADER_API_GLES31 SHADER_API_GLES32 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=0 type=Vertex platform=d3d11 reqs=1 mask=6 start=32 ok=1 outsize=890
+
+Cmd: compileSnippet
+  insize=1538 file=Assets/Shaders/InstancedQuad.shader name=GpuSim/InstancedQuad pass=<Unnamed Pass 0> ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW= dKW=UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 SHADER_API_GLES31 SHADER_API_GLES32 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=0 type=Vertex platform=d3d11 reqs=1101803 mask=6 start=10 ok=1 outsize=754
+
+Cmd: compileSnippet
+  insize=1479 file=Assets/Shaders/InstancedQuad.shader name=GpuSim/InstancedQuad pass=<Unnamed Pass 0> ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW= dKW=UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 SHADER_API_GLES31 SHADER_API_GLES32 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=0 type=Vertex platform=d3d11 reqs=1101803 mask=6 start=10 ok=1 outsize=1022
+
+Cmd: compileComputeKernel
+  insize=24723 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(623): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(624): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(625): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=2929
+
+Cmd: compileComputeKernel
+  insize=24723 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(105): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(623): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(624): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3366
+
+Cmd: compileComputeKernel
+  insize=24723 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(623): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(624): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1741
+
+Cmd: compileComputeKernel
+  insize=24723 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(623): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(624): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=24723 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(105): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(391): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(391): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(395): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(411): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(411): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(412): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(438): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(461): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(483): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(499): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(515): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(623): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(624): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11417
+
+Cmd: compileComputeKernel
+  insize=24723 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(623): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(624): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=24723 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(623): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(624): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=992
+
+Cmd: compileComputeKernel
+  insize=24723 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(73): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(74): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(139): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(141): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(154): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(161): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(163): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(168): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(187): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(192): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(200): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(207): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(212): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(235): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(240): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(249): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(251): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(256): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(261): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(270): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(272): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(279): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(282): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(285): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(293): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(297): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(302): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(309): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(317): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(322): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(623): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(624): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=25943
+
+Cmd: compileComputeKernel
+  insize=26340 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(654): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(655): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(656): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4066
+
+Cmd: compileComputeKernel
+  insize=26340 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(105): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(654): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(655): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3366
+
+Cmd: compileComputeKernel
+  insize=26340 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(654): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(655): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1741
+
+Cmd: compileComputeKernel
+  insize=26340 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(654): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(655): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=26340 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(105): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(391): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(391): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(395): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(411): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(411): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(412): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(438): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(461): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(483): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(499): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(515): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(654): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(655): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11417
+
+Cmd: compileComputeKernel
+  insize=26340 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(654): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(655): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=26340 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(654): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(655): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=992
+
+Cmd: compileComputeKernel
+  insize=26340 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(73): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(74): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(139): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(141): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(154): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(161): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(163): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(168): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(187): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(192): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(200): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(207): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(212): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(235): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(240): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(249): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(251): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(256): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(261): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(270): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(272): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(279): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(282): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(285): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(293): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(297): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(302): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(309): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(317): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(322): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(654): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(655): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=25943
+
+Cmd: compileComputeKernel
+  insize=27120 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(674): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(675): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(676): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4066
+
+Cmd: compileComputeKernel
+  insize=27120 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(105): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(674): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(675): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3366
+
+Cmd: compileComputeKernel
+  insize=27120 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(674): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(675): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=2025
+
+Cmd: compileComputeKernel
+  insize=27120 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(674): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(675): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=27120 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(105): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(396): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(396): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(400): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(416): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(416): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(417): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(444): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(467): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(489): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(505): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(521): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(674): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(675): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11503
+
+Cmd: compileComputeKernel
+  insize=27120 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(674): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(675): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=27120 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(674): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(675): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1208
+
+Cmd: compileComputeKernel
+  insize=27120 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(73): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(74): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(139): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(141): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(154): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(161): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(163): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(168): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(187): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(192): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(200): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(207): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(212): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(235): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(240): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(249): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(251): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(256): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(261): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(270): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(272): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(279): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(282): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(285): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(293): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(297): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(302): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(309): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(317): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(322): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(674): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(675): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=25943
+
+Cmd: compileComputeKernel
+  insize=27730 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(682): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(683): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(684): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4066
+
+Cmd: compileComputeKernel
+  insize=27730 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(106): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(682): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(683): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3366
+
+Cmd: compileComputeKernel
+  insize=27730 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(682): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(683): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=2096
+
+Cmd: compileComputeKernel
+  insize=27730 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(682): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(683): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=27730 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(106): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(397): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(397): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(401): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(417): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(417): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(418): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(445): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(474): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(496): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(512): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(528): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(682): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(683): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11619
+
+Cmd: compileComputeKernel
+  insize=27730 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(682): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(683): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=27730 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(682): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(683): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1208
+
+Cmd: compileComputeKernel
+  insize=27730 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(74): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(75): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(140): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(142): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(155): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(162): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(164): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(169): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(188): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(193): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(201): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(208): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(213): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(236): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(241): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(250): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(252): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(257): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(262): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(271): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(273): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(280): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(283): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(286): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(294): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(298): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(303): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(310): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(318): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(323): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(682): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(683): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=26006
+
+Cmd: compileComputeKernel
+  insize=28163 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(685): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(686): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(687): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4066
+
+Cmd: compileComputeKernel
+  insize=28163 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(106): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(685): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(686): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3366
+
+Cmd: compileComputeKernel
+  insize=28163 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(685): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(686): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=2096
+
+Cmd: compileComputeKernel
+  insize=28163 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(685): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(686): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=28163 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(106): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(397): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(397): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(401): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(420): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(420): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(421): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(448): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(477): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(499): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(515): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(531): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(685): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(686): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11851
+
+Cmd: compileComputeKernel
+  insize=28163 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(685): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(686): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=28163 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(685): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(686): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1208
+
+Cmd: compileComputeKernel
+  insize=28163 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(74): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(75): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(140): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(142): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(155): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(162): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(164): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(169): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(188): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(193): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(201): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(208): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(213): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(236): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(241): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(250): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(252): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(257): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(262): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(271): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(273): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(280): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(283): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(286): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(294): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(298): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(303): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(310): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(318): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(323): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(685): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(686): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=26006
+
+Cmd: compileComputeKernel
+  insize=29262 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at GpuSim.compute(706): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(707): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(708): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4066
+
+Cmd: compileComputeKernel
+  insize=29262 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at GpuSim.compute(706): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(707): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3969
+
+Cmd: compileComputeKernel
+  insize=29262 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at GpuSim.compute(706): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(707): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=2292
+
+Cmd: compileComputeKernel
+  insize=29262 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at GpuSim.compute(706): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(707): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=29262 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at GpuSim.compute(418): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(418): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(422): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(441): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(441): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(442): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(469): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(498): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(520): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(536): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(552): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(706): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(707): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=12951
+
+Cmd: compileComputeKernel
+  insize=29262 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at GpuSim.compute(706): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(707): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=29262 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at GpuSim.compute(706): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(707): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1208
+
+Cmd: compileComputeKernel
+  insize=29262 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(74): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(75): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(115): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at GpuSim.compute(161): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(163): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(176): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(183): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(185): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(190): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(209): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(214): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(222): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(229): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(234): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(257): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(262): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(271): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(273): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(278): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(283): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(292): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(294): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(301): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(304): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(307): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(315): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(319): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(324): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(331): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(339): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(344): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(706): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(707): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=26006
+
+Cmd: compileComputeKernel
+  insize=29766 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(712): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(713): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(714): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4066
+
+Cmd: compileComputeKernel
+  insize=29766 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(114): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(712): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(713): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3109
+
+Cmd: compileComputeKernel
+  insize=29766 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(712): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(713): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=2384
+
+Cmd: compileComputeKernel
+  insize=29766 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(712): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(713): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=29766 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(114): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(416): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(416): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(420): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(439): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(439): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(440): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(467): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(496): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(518): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(534): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(550): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(712): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(713): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11223
+
+Cmd: compileComputeKernel
+  insize=29766 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(712): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(713): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=29766 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(712): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(713): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1208
+
+Cmd: compileComputeKernel
+  insize=29766 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(75): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(76): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(159): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(161): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(174): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(181): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(183): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(188): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(207): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(212): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(220): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(227): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(232): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(255): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(260): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(269): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(271): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(276): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(281): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(290): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(292): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(299): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(302): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(305): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(313): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(317): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(322): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(329): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(337): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(342): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(712): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(713): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=26006
+
+Cmd: compileComputeKernel
+  insize=29978 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(715): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(717): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4066
+
+Cmd: compileComputeKernel
+  insize=29978 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(114): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(715): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3125
+
+Cmd: compileComputeKernel
+  insize=29978 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(715): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=2384
+
+Cmd: compileComputeKernel
+  insize=29978 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(715): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=29978 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(114): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(419): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(419): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(423): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(442): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(442): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(443): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(470): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(499): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(521): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(537): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(553): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(715): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11239
+
+Cmd: compileComputeKernel
+  insize=29978 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(715): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=29978 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(715): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1208
+
+Cmd: compileComputeKernel
+  insize=29978 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(75): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(76): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(162): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(164): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(177): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(184): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(186): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(191): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(210): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(215): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(223): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(230): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(235): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(258): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(263): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(272): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(274): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(279): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(284): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(293): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(295): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(302): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(305): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(308): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(316): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(320): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(325): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(332): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(340): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(345): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(715): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=26006
+
+Cmd: compileComputeKernel
+  insize=30435 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(718): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4066
+
+Cmd: compileComputeKernel
+  insize=30435 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(114): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3125
+
+Cmd: compileComputeKernel
+  insize=30435 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=2268
+
+Cmd: compileComputeKernel
+  insize=30435 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=30435 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(114): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(419): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(419): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(423): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(442): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(442): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(443): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(470): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(499): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(521): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(537): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(553): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11239
+
+Cmd: compileComputeKernel
+  insize=30435 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=30435 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1208
+
+Cmd: compileComputeKernel
+  insize=30435 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(75): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(76): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(162): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(164): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(177): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(184): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(186): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(191): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(210): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(215): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(223): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(230): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(235): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(258): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(263): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(272): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(274): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(279): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(284): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(293): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(295): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(302): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(305): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(308): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(316): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(320): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(325): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(332): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(340): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(345): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(716): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=26006
+
+Cmd: compileComputeKernel
+  insize=30576 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(718): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(719): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4066
+
+Cmd: compileComputeKernel
+  insize=30576 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(718): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3125
+
+Cmd: compileComputeKernel
+  insize=30576 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(718): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=2268
+
+Cmd: compileComputeKernel
+  insize=30576 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(718): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1000
+
+Cmd: compileComputeKernel
+  insize=30576 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(420): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(420): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(424): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(443): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(443): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(444): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(471): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(500): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(522): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(538): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(554): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(718): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11239
+
+Cmd: compileComputeKernel
+  insize=30576 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(718): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1159
+
+Cmd: compileComputeKernel
+  insize=30576 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(718): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1208
+
+Cmd: compileComputeKernel
+  insize=30576 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(76): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(77): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(163): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(165): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(178): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(185): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(187): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(192): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(211): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(216): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(224): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(231): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(236): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(259): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(264): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(273): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(275): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(280): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(285): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(294): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(296): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(303): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(306): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(309): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(317): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(321): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(326): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(333): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(341): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(346): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(717): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(718): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=26006
+
+Cmd: compileComputeKernel
+  insize=31004 file=Assets/Resources/GpuSim.compute kernel=FillInstances ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(725): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(726): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(727): integer modulus may be much slower, try using uints if possible.
+ ok=1 outsize=4188
+
+Cmd: compileComputeKernel
+  insize=31004 file=Assets/Resources/GpuSim.compute kernel=Spawn ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(725): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(726): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=3125
+
+Cmd: compileComputeKernel
+  insize=31004 file=Assets/Resources/GpuSim.compute kernel=Compact ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(725): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(726): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=2394
+
+Cmd: compileComputeKernel
+  insize=31004 file=Assets/Resources/GpuSim.compute kernel=ApplyInfection ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(725): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(726): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1086
+
+Cmd: compileComputeKernel
+  insize=31004 file=Assets/Resources/GpuSim.compute kernel=ResolveApply ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(115): use of potentially uninitialized variable (allocFree)
+  error: 1 plat 4 at GpuSim.compute(424): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(424): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(428): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(447): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(447): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(448): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(475): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(504): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(526): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(542): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(558): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(725): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(726): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=11381
+
+Cmd: compileComputeKernel
+  insize=31004 file=Assets/Resources/GpuSim.compute kernel=ResolveClaim ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(725): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(726): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1241
+
+Cmd: compileComputeKernel
+  insize=31004 file=Assets/Resources/GpuSim.compute kernel=Clear ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(725): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(726): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=1294
+
+Cmd: compileComputeKernel
+  insize=31004 file=Assets/Resources/GpuSim.compute kernel=SimStep ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60040006> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=50241 forceDXC=0 forceFXC=0  error: 1 plat 4 at GpuSim.compute(76): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(77): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(164): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(166): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(179): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(186): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(188): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(193): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(212): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(217): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(225): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(232): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(237): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(260): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(265): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(274): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(276): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(281): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(286): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(295): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(297): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(304): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(307): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(310): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(318): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(322): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(327): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(334): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(342): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(347): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at GpuSim.compute(725): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at GpuSim.compute(726): 'z': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+ ok=1 outsize=26264
+
+Cmd: shutdown

@@ -1,0 +1,733 @@
+// GpuSim.compute — двухпроходная симуляция клеток на GPU.
+// Чтобы уложиться в лимит 8 UAV/ядро (D3D11), буферы, которые только читаются,
+// объявлены как StructuredBuffer (RO-алиасы), а записываемые — как RWStructuredBuffer.
+// В C# один и тот же ComputeBuffer привязывается к нужному имени в каждом ядре.
+
+#pragma kernel SimStep
+#pragma kernel Clear
+#pragma kernel ResolveClaim
+#pragma kernel ResolveApply
+#pragma kernel ApplyInfection
+#pragma kernel Compact
+#pragma kernel Spawn
+#pragma kernel FillInstances
+
+#define ALIVE    1u
+#define DEAD     2u
+#define COLONY   4u
+#define PENDING  8u
+#define DNADIRTY 16u
+#define FREE     32u
+#define INPOOL   64u   // клетка лежит в пуле свободных (_FreeList)
+
+// --- параметры от C# ---
+int   _MaxX;
+int   _MaxY;
+int   _MaxCells;
+uint  _DispatchW;   // ширина плоской развёртки 2D-диспетчера (= groupX*64); id = dtid.x + dtid.y*_DispatchW
+int   _MaxCommand;
+uint  _RandSeed;
+int   _Step;
+int   _SpawnCount;
+int   _InitialEnergy;
+int   _BreedCost;
+int   _FoodDecay;
+int   _CorpseFood;   // стартовая питательность свежего трупа (убывает на _FoodDecay за шаг)
+int   _EnergyView;
+int   _ViewMode;       // 0=ДНК,1=энергия,2=возраст,3=действие,4=колония
+int   _CellLifespan;   // время жизни клетки в шагах; 0 = бесконечно
+int   _LightMode;      // 0=радиальное,1=равномерное,2=градиент по Y
+float _LightLevel;     // множитель мощности фотосинтеза (0..2)
+float _StatBonus;
+
+struct CellState { int x; int y; int dir; int ip; int steps; int id; uint flags; int pad; };
+struct Intent { int type; int targetSlot; int oldSlot; int amount; int ipAfter; int priority; int okOffset; int failOffset; int childIp; int extra; };
+
+// --- RW буферы (записываются в каких-то ядрах) ---
+RWStructuredBuffer<int>        _Grid;        // MaxX*MaxY
+RWStructuredBuffer<int>        _Energy;      // MaxCells
+RWStructuredBuffer<CellState>  _Cells;       // MaxCells
+RWStructuredBuffer<uint>        _DnaProg;     // MaxCells*20
+RWStructuredBuffer<uint>        _Genes;       // MaxCells
+RWStructuredBuffer<Intent>      _Intents;     // MaxCells
+RWStructuredBuffer<int>         _Claim;       // MaxX*MaxY
+RWStructuredBuffer<int>         _InfectOwner; // MaxCells
+RWStructuredBuffer<CellState>  _CellsNext;
+RWStructuredBuffer<int>        _EnergyNext;
+RWStructuredBuffer<int>        _FreeList;    // [0]=счётчик, [1..MaxCells]=индексы пула
+RWStructuredBuffer<int>        _Stats;        // [0]=alive,[1]=food,[2]=step,[3]=totalEnergy,[4]=births,[5]=deaths,[6]=colony,[7]=totalAge,[8]=freeSlots
+RWStructuredBuffer<int>        _SpawnDone;    // [0]
+RWStructuredBuffer<float4x4>   _MatBuf;
+RWStructuredBuffer<float4>     _ColorBuf;
+
+// --- RO-алиасы (только чтение в конкретных ядрах; тот же буфер из C#) ---
+StructuredBuffer<int>        _GridRO;
+StructuredBuffer<int>        _EnergyRO;
+StructuredBuffer<CellState>  _CellsRO;
+StructuredBuffer<uint>       _DnaProgRO;
+StructuredBuffer<uint>       _GenesRO;
+StructuredBuffer<Intent>     _IntentsRO;
+StructuredBuffer<int>        _ClaimRO;
+StructuredBuffer<int>        _InfectOwnerRO;
+
+// --- хелперы ---
+static const int2 DD[8] = { {0,1},{1,1},{1,0},{1,-1},{0,-1},{-1,-1},{-1,0},{-1,1} };
+
+int wrapX(int v) { v %= _MaxX; if (v < 0) v += _MaxX; return v; }
+int wrapY(int v) { v %= _MaxY; if (v < 0) v += _MaxY; return v; }
+
+uint pcg(uint s) { s = s * 747796405u + 2891336453u; uint w = ((s >> ((s >> 28u) + 4u)) ^ s) * 277803737u; return (w >> 22u) ^ w; }
+uint rnd(uint id, uint salt) { return pcg(_RandSeed + id * 1664525u + salt * 374761393u); }
+
+uint gbyte(uint ci, uint a) { a = a % 80u; uint w = _DnaProgRO[ci * 20u + a / 4u]; return (w >> ((a % 4u) * 8u)) & 0xffu; }
+
+float fb(int b) { return (float)b / 255.0; }
+int rankOf(int b) { return (int)round(fb(b) * 10.0); }
+int prioOf(uint g) { return rankOf((g >> 0) & 0xff) - rankOf((g >> 8) & 0xff); }
+float dealtMult(uint g) { return 1.0 + _StatBonus * fb((g >> 8) & 0xff) - _StatBonus * fb((g >> 0) & 0xff) - _StatBonus * fb((g >> 24) & 0xff); }
+float takenMult(uint g) { return 1.0 + _StatBonus * fb((g >> 0) & 0xff) + _StatBonus * fb((g >> 24) & 0xff) - _StatBonus * fb((g >> 16) & 0xff); }
+float energyMult(uint g) { return 1.0 - _StatBonus * fb((g >> 24) & 0xff) + _StatBonus * fb((g >> 16) & 0xff); }
+int cost(float baseCost, float em) { return (int)ceil(baseCost * em); }
+
+int diffBytes(uint a, uint b) { uint x = a ^ b; int c = 0; if (x & 0xff) c++; if (x & 0xff00) c++; if (x & 0xff0000) c++; if (x & 0xff000000) c++; return c; }
+bool relationFriend(uint a, uint b)
+{
+    int miss = 0;
+    [loop] for (uint k = 0; k < 20u; k++)
+    {
+        uint wa = _DnaProgRO[a * 20u + k], wb = _DnaProgRO[b * 20u + k];
+        if (wa != wb) { miss += diffBytes(wa, wb); if (miss > 1) return false; }
+    }
+    return true;
+}
+
+// Free list как массив со счётчиком: _FreeList[0]=count, _FreeList[1..count]=свободные id.
+// БЕЗОПАСНОСТЬ: push и pop разнесены по разным dispatch'ам — в рамках одного ядра
+// бывает только один тип операций, поэтому InterlockedAdd на счётчике не даёт гонки
+// (нет одновременных push+pop, нет ABA, нет двойных выдач одного id).
+//   pop  — allocFree в Apply(Breed)/Spawn;
+//   push — poolAdd в Compact (единственное место, кладущее в пул).
+// markFree клетку в пул НЕ кладёт — только помечает FREE; Compact соберёт её в конце шага.
+
+int allocFree()
+{
+    int old; InterlockedAdd(_FreeList[0], -1, old); // pop: old = count до уменьшения
+    if (old <= 0) { InterlockedAdd(_FreeList[0], 1, old); return -1; }
+    int idx = _FreeList[old];
+    _FreeList[old] = -1;                            // очистить позицию, иначе при колебаниях
+                                                    // счётчика она будет перечитана как stale
+    return idx;
+}
+
+// Положить клетку в пул (вызывается только из Compact). pos уникален у каждого потока.
+void poolAdd(int idx)
+{
+    int pos; InterlockedAdd(_FreeList[0], 1, pos);
+    if (pos < _MaxCells)
+    {
+        _FreeList[pos + 1] = idx;
+        CellState c = _Cells[idx]; c.flags |= INPOOL; _Cells[idx] = c;
+    }
+}
+
+// Освобождение: помечаем FREE (без INPOOL), grid уже очищен вызывающим.
+// В пул вернёт Compact в конце этого же шага.
+void markFree(int idx)
+{
+    CellState c = _Cells[idx]; c.flags = FREE; _Cells[idx] = c;
+}
+
+int packedPrio(int prio, uint id, uint salt)
+{
+    uint r = rnd(id, salt);
+    return ((prio + 1024) << 16) | (int)(r & 0xffff);
+}
+
+// ============================================================
+// 1. SimStep
+// ============================================================
+[numthreads(64, 1, 1)]
+void SimStep(uint3 dtid : SV_DispatchThreadID)
+{
+    uint id = dtid.x + dtid.y * _DispatchW;
+    Intent ei = (Intent)0; ei.type = 0; ei.targetSlot = -1; ei.oldSlot = -1;
+    if (id >= (uint)_MaxCells) return;
+
+    CellState c = _CellsRO[id];
+    if (!(c.flags & ALIVE) || (c.flags & DEAD) || (c.flags & FREE))
+    {
+        _CellsNext[id] = c; _EnergyNext[id] = _EnergyRO[id]; _Intents[id] = ei; return;
+    }
+
+    uint g = _GenesRO[id];
+    float em = energyMult(g);
+    int ip = c.ip % 80; if (ip < 0) ip += 80;
+    int energy = _EnergyRO[id];
+    int dir = c.dir % 8; if (dir < 0) dir += 8;
+    int x = c.x, y = c.y;
+    int steps = c.steps + 1;
+    bool pending = false;
+    ei.priority = prioOf(g);
+
+    [loop] for (int iter = 0; iter < _MaxCommand && !pending; iter++)
+    {
+        uint op = gbyte(id, ip);
+        uint grp = op / 8u;
+
+        if (grp == 0) // MOVE
+        {
+            int d = (int)(op % 8u) + dir; d = ((d % 8) + 8) % 8;
+            int nx = wrapX(x + DD[d].x), ny = wrapY(y + DD[d].y);
+            int slot = ny * _MaxX + nx;
+            if (_GridRO[slot] == -1)
+            {
+                ei.type = 1; ei.targetSlot = slot; ei.oldSlot = y * _MaxX + x;
+                ei.okOffset = (int)gbyte(id, ip + 1); ei.failOffset = (int)gbyte(id, ip + 2);
+                ei.ipAfter = (ip + 3) % 80; pending = true;
+            }
+            else ip = (ip + 3 + (int)gbyte(id, ip + 2)) % 80;
+            energy -= cost(1.0, em);
+        }
+        else if (grp == 1) // ROTATE + LOOK (5 веток)
+        {
+            dir = (((int)(op % 8u) + dir) % 8 + 8) % 8;
+            int nx = wrapX(x + DD[dir].x), ny = wrapY(y + DD[dir].y);
+            int slot = ny * _MaxX + nx; int occ = _GridRO[slot];
+            int cat = 0;
+            if (occ != -1)
+            {
+                CellState o = _CellsRO[occ];
+                if (o.flags & DEAD) cat = 3;
+                else if (relationFriend(id, (uint)occ)) cat = 2;
+                else cat = 1;
+            }
+            uint off = gbyte(id, ip + 1 + (uint)cat);
+            ip = (ip + 6 + off) % 80;
+            energy -= cost(1.0, em);
+        }
+        else if (grp == 2) // EAT
+        {
+            int d = dir; int nx = wrapX(x + DD[d].x), ny = wrapY(y + DD[d].y);
+            int slot = ny * _MaxX + nx; int occ = _GridRO[slot];
+            if (occ == -1) ip = (ip + 3 + (int)gbyte(id, ip + 2)) % 80;
+            else
+            {
+                ei.type = 2; ei.targetSlot = slot; ei.amount = 23;
+                ei.okOffset = (int)gbyte(id, ip + 1); ei.failOffset = (int)gbyte(id, ip + 2);
+                ei.ipAfter = (ip + 3) % 80; pending = true;
+            }
+            energy -= cost(2.0, em);
+        }
+        else if (grp == 3) // CHECKENERGY
+        {
+            int thr = (int)gbyte(id, ip + 1);
+            int off = (energy > thr) ? (int)gbyte(id, ip + 2) : (int)gbyte(id, ip + 3);
+            ip = (ip + 4 + off) % 80;
+            energy -= cost(1.0, em);
+        }
+        else if (grp == 4) // HIT
+        {
+            int d = dir; int nx = wrapX(x + DD[d].x), ny = wrapY(y + DD[d].y);
+            int slot = ny * _MaxX + nx; int occ = _GridRO[slot];
+            if (occ == -1) ip = (ip + 3 + (int)gbyte(id, ip + 2)) % 80;
+            else
+            {
+                ei.type = 3; ei.targetSlot = slot; ei.amount = (int)ceil(60.0 * dealtMult(g));
+                ei.okOffset = (int)gbyte(id, ip + 1); ei.failOffset = (int)gbyte(id, ip + 2);
+                ei.ipAfter = (ip + 3) % 80; pending = true;
+            }
+            energy -= cost(2.0, em);
+        }
+        else if (grp == 5) // PHOTOSYNTHESIS
+        {
+            float light;
+            if (_LightMode == 1)        // равномерное
+            {
+                light = 1.0;
+            }
+            else if (_LightMode == 2)   // градиент по Y (сверху ярче)
+            {
+                light = saturate((float)y / max((float)(_MaxY - 1), 1.0));
+            }
+            else                        // радиальное от центра (по умолчанию)
+            {
+                float cx = (_MaxX - 1) * 0.5, cy = (_MaxY - 1) * 0.5;
+                float dist = distance(float2(x, y), float2(cx, cy));
+                float dist0 = distance(float2(cx, cy), float2(0, 0));
+                light = sin((dist0 - dist) / max(dist0, 1.0) * 3.14159265 * 0.5);
+            }
+            energy += (int)ceil(light * _LightLevel * 5.0);
+            ip = (ip + 2 + (int)gbyte(id, ip + 1)) % 80;
+            energy -= cost(1.0, em);
+        }
+        else if (grp == 6) // BREED
+        {
+            int d = (int)(op % 8u) + dir; d = ((d % 8) + 8) % 8;
+            int nx = wrapX(x + DD[d].x), ny = wrapY(y + DD[d].y);
+            int slot = ny * _MaxX + nx; int occ = _GridRO[slot];
+            int childIp = (int)gbyte(id, ip + 1);
+            int give = (int)ceil(energy * 0.45);
+            if (occ == -1 && energy > _BreedCost && give > 0)
+            {
+                ei.type = 4; ei.targetSlot = slot; ei.amount = give; ei.childIp = childIp;
+                ei.okOffset = (int)gbyte(id, ip + 2); ei.failOffset = (int)gbyte(id, ip + 3);
+                ei.ipAfter = (ip + 4) % 80; pending = true; energy -= give + 5;
+            }
+            else ip = (ip + 4 + (int)gbyte(id, ip + 3)) % 80;
+            energy -= cost(5.0, em);
+        }
+        else if (grp == 7) // GOTO
+        {
+            ip = (int)gbyte(id, ip + 1) % 80;
+            energy -= cost(1.0, em);
+        }
+        else if (grp == 8) // BREED COLONY
+        {
+            int d = (int)(op % 8u) + dir; d = ((d % 8) + 8) % 8;
+            int nx = wrapX(x + DD[d].x), ny = wrapY(y + DD[d].y);
+            int slot = ny * _MaxX + nx; int occ = _GridRO[slot];
+            int childIp = (int)gbyte(id, ip + 1);
+            int give = (int)ceil(energy * 0.45);
+            if (occ == -1 && energy > _BreedCost && give > 0)
+            {
+                ei.type = 5; ei.targetSlot = slot; ei.amount = give; ei.childIp = childIp;
+                ei.okOffset = (int)gbyte(id, ip + 2); ei.failOffset = (int)gbyte(id, ip + 3);
+                ei.ipAfter = (ip + 4) % 80; pending = true; energy -= give + 5;
+            }
+            else ip = (ip + 4 + (int)gbyte(id, ip + 3)) % 80;
+            energy -= cost(5.0, em);
+        }
+        else if (grp == 9) // TRANSFER
+        {
+            int d = dir; int nx = wrapX(x + DD[d].x), ny = wrapY(y + DD[d].y);
+            int slot = ny * _MaxX + nx; int occ = _GridRO[slot];
+            if (occ == -1) ip = (ip + 3 + (int)gbyte(id, ip + 2)) % 80;
+            else
+            {
+                int food = energy / 5; if (food > 0) energy -= food; else food = 0;
+                ei.type = 6; ei.targetSlot = slot; ei.amount = food;
+                ei.okOffset = (int)gbyte(id, ip + 1); ei.failOffset = (int)gbyte(id, ip + 2);
+                ei.ipAfter = (ip + 3) % 80; pending = true;
+            }
+            energy -= cost(1.0, em);
+        }
+        else if (grp == 10) // INFECTION
+        {
+            int d = dir; int nx = wrapX(x + DD[d].x), ny = wrapY(y + DD[d].y);
+            int slot = ny * _MaxX + nx; int occ = _GridRO[slot];
+            if (occ == -1) ip = (ip + 3 + (int)gbyte(id, ip + 2)) % 80;
+            else
+            {
+                CellState o = _CellsRO[occ];
+                if (o.flags & DEAD) ip = (ip + 3 + (int)gbyte(id, ip + 2)) % 80;
+                else
+                {
+                    ei.type = 7; ei.targetSlot = slot; ei.amount = occ;
+                    ei.okOffset = (int)gbyte(id, ip + 1); ei.failOffset = (int)gbyte(id, ip + 2);
+                    ei.ipAfter = (ip + 3) % 80; pending = true;
+                }
+            }
+            energy -= cost(2.0, em);
+        }
+        else // FIRE
+        {
+            int d = (int)(op % 8u) + dir; d = ((d % 8) + 8) % 8;
+            int rx = x, ry = y; int hit = -1;
+            [loop] for (int k = 0; k < 3; k++)
+            {
+                rx = wrapX(rx + DD[d].x); ry = wrapY(ry + DD[d].y);
+                int slot = ry * _MaxX + rx;
+                if (_GridRO[slot] != -1) { hit = slot; break; }
+            }
+            if (hit == -1) ip = (ip + 3 + (int)gbyte(id, ip + 2)) % 80;
+            else
+            {
+                ei.type = 8; ei.targetSlot = hit; ei.amount = (int)ceil(35.0 * dealtMult(g));
+                ei.okOffset = (int)gbyte(id, ip + 1); ei.failOffset = (int)gbyte(id, ip + 2);
+                ei.ipAfter = (ip + 3) % 80; pending = true;
+            }
+            energy -= cost(3.0, em);
+        }
+
+        if (energy <= 0) break;
+    }
+
+    energy -= 1;
+    if (energy > 255) energy = 255;
+    if (energy <= 0) { energy = _CorpseFood; c.flags |= DEAD; c.flags &= ~ALIVE; }
+    if (_CellLifespan > 0 && steps >= _CellLifespan) { energy = _CorpseFood; c.flags |= DEAD; c.flags &= ~ALIVE; }
+
+    c.ip = ip; c.dir = dir; c.x = x; c.y = y; c.steps = steps;
+    if (pending) c.flags |= PENDING; else c.flags &= ~PENDING;
+    _CellsNext[id] = c;
+    _EnergyNext[id] = energy;
+    _Intents[id] = ei;
+}
+
+// ============================================================
+// 2. Clear
+// ============================================================
+[numthreads(64, 1, 1)]
+void Clear(uint3 dtid : SV_DispatchThreadID)
+{
+    uint id = dtid.x + dtid.y * _DispatchW;
+    if (id < (uint)(_MaxX * _MaxY)) _Claim[id] = -1;
+    if (id < (uint)_MaxCells) _InfectOwner[id] = -1;
+    if (id == 0)
+    {
+        _SpawnDone[0] = 0;
+        _Stats[0] = 0; _Stats[1] = 0; _Stats[2] = _Step;
+        _Stats[3] = 0; _Stats[4] = 0; _Stats[5] = 0; _Stats[6] = 0; _Stats[7] = 0; _Stats[8] = 0;
+    }
+}
+
+// ============================================================
+// 3. ResolveClaim
+// ============================================================
+[numthreads(64, 1, 1)]
+void ResolveClaim(uint3 dtid : SV_DispatchThreadID)
+{
+    uint id = dtid.x + dtid.y * _DispatchW;
+    if (id >= (uint)_MaxCells) return;
+    Intent e = _IntentsRO[id];
+    if (e.type == 1 || e.type == 4 || e.type == 5)
+    {
+        int p = packedPrio(e.priority, id, 7u);
+        int prev; InterlockedMax(_Claim[e.targetSlot], p, prev);
+    }
+}
+
+// ============================================================
+// 4. ResolveApply
+// ============================================================
+[numthreads(64, 1, 1)]
+void ResolveApply(uint3 dtid : SV_DispatchThreadID)
+{
+    uint id = dtid.x + dtid.y * _DispatchW;
+    if (id >= (uint)_MaxCells) return;
+    Intent e = _IntentsRO[id];
+    if (e.type == 0) return;
+
+    CellState c = _Cells[id];
+    uint g = _Genes[id];
+    bool ok = false;
+
+    if (e.type == 1) // MOVE
+    {
+        int p = packedPrio(e.priority, id, 7u);
+        if (_ClaimRO[e.targetSlot] == p)
+        {
+            int prev; InterlockedCompareExchange(_Grid[e.targetSlot], -1, (int)id, prev);
+            if (prev == -1)
+            {
+                _Grid[e.oldSlot] = -1;
+                c.x = e.targetSlot % _MaxX; c.y = e.targetSlot / _MaxX;
+                ok = true;
+            }
+        }
+        c.ip = (e.ipAfter + (ok ? e.okOffset : e.failOffset)) % 80;
+        c.flags &= ~PENDING; _Cells[id] = c; return;
+    }
+
+    if (e.type == 4 || e.type == 5) // BREED
+    {
+        int p = packedPrio(e.priority, id, 7u);
+        if (_ClaimRO[e.targetSlot] == p)
+        {
+            int child = allocFree();
+            if (child >= 0)
+            {
+                // Резервируем слот ПОД РЕБЁНКА (а не под родителя, как было раньше):
+                // иначе grid[targetSlot] навсегда указывает на родителя, ребёнок
+                // становится невидимым для сетки, а его труп потом невозможно удалить.
+                int prev; InterlockedCompareExchange(_Grid[e.targetSlot], -1, child, prev);
+                if (prev == -1)
+                {
+                    CellState ch = (CellState)0;
+                    ch.x = e.targetSlot % _MaxX; ch.y = e.targetSlot / _MaxX;
+                    ch.dir = 0; ch.ip = e.childIp % 80; ch.steps = 0; ch.id = child;
+                    ch.flags = ALIVE; if (e.type == 5) ch.flags |= COLONY;
+                    _Cells[child] = ch; _Energy[child] = e.amount;
+
+                    uint ng = g;
+                    if (rnd(id, 11u) % 100u < 12u) ng ^= (1u << (rnd(id, 13u) % 32u));
+                    _Genes[child] = ng;
+
+                    uint mutByte = rnd(id, 17u) % 80u;
+                    bool doMut = (rnd(id, 19u) % 100u) < 12u;
+                    [loop] for (uint k = 0; k < 20u; k++)
+                    {
+                        uint w = _DnaProg[id * 20u + k];
+                        if (doMut && (mutByte / 4u) == k)
+                        {
+                            uint shift = (mutByte % 4u) * 8u;
+                            uint mask = 0xffu << shift;
+                            w = (w & ~mask) | (((uint)rnd(id, 23u + k) & 0xffu) << shift);
+                        }
+                        _DnaProg[child * 20u + k] = w;
+                    }
+                    InterlockedAdd(_Stats[4], 1); // рождение
+                    ok = true;
+                }
+                else markFree(child); // слот успели занять — вернуть ребёнка в пул
+            }
+        }
+        c.ip = (e.ipAfter + (ok ? e.okOffset : e.failOffset)) % 80;
+        c.flags &= ~PENDING; _Cells[id] = c; return;
+    }
+
+    if (e.type == 2) // EAT
+    {
+        int occ = _Grid[e.targetSlot];
+        if (occ != -1)
+        {
+            CellState t = _Cells[occ];
+            if (t.flags & DEAD)
+            {
+                int prev; InterlockedCompareExchange(_Grid[e.targetSlot], occ, -1, prev);
+                if (prev == occ)
+                {
+                    // поедание даёт текущую (убывающую) питательность трупа, а не фиксированную
+                    int food = _Energy[occ]; if (food < 0) food = 0;
+                    if (food > 0) InterlockedAdd(_Energy[id], food);
+                    markFree(occ); ok = true;
+                }
+            }
+            else
+            {
+                int dmg = (int)ceil(20.0 * dealtMult(g) * takenMult(_Genes[occ]));
+                InterlockedAdd(_Energy[occ], -dmg);
+                InterlockedAdd(_Energy[id], max(0, dmg - 5));
+                ok = true;
+            }
+        }
+        c.ip = (e.ipAfter + (ok ? e.okOffset : e.failOffset)) % 80;
+        c.flags &= ~PENDING; _Cells[id] = c; return;
+    }
+
+    if (e.type == 3 || e.type == 8) // HIT / FIRE
+    {
+        int occ = _Grid[e.targetSlot];
+        if (occ != -1)
+        {
+            CellState t = _Cells[occ];
+            if (t.flags & DEAD)
+            {
+                int prev; InterlockedCompareExchange(_Grid[e.targetSlot], occ, -1, prev);
+                if (prev == occ) { markFree(occ); ok = true; }
+            }
+            else
+            {
+                int baseDmg = (e.type == 3) ? 60 : 35;
+                InterlockedAdd(_Energy[occ], -(int)ceil((float)baseDmg * dealtMult(g) * takenMult(_Genes[occ])));
+                ok = true;
+            }
+        }
+        c.ip = (e.ipAfter + (ok ? e.okOffset : e.failOffset)) % 80;
+        c.flags &= ~PENDING; _Cells[id] = c; return;
+    }
+
+    if (e.type == 6) // TRANSFER
+    {
+        int occ = _Grid[e.targetSlot];
+        if (occ != -1)
+        {
+            CellState t = _Cells[occ];
+            if (!(t.flags & DEAD))
+            {
+                int amt = e.amount - 3; if (amt > 0) InterlockedAdd(_Energy[occ], amt);
+                ok = true;
+            }
+        }
+        c.ip = (e.ipAfter + (ok ? e.okOffset : e.failOffset)) % 80;
+        c.flags &= ~PENDING; _Cells[id] = c; return;
+    }
+
+    if (e.type == 7) // INFECTION
+    {
+        int occ = _Grid[e.targetSlot];
+        if (occ != -1)
+        {
+            CellState t = _Cells[occ];
+            if (!(t.flags & DEAD))
+            {
+                int prev; InterlockedCompareExchange(_InfectOwner[occ], -1, (int)id, prev);
+                if (prev == -1) ok = true;
+            }
+        }
+        c.ip = (e.ipAfter + (ok ? e.okOffset : e.failOffset)) % 80;
+        c.flags &= ~PENDING; _Cells[id] = c; return;
+    }
+}
+
+// ============================================================
+// 5. ApplyInfection
+// ============================================================
+[numthreads(64, 1, 1)]
+void ApplyInfection(uint3 dtid : SV_DispatchThreadID)
+{
+    uint id = dtid.x + dtid.y * _DispatchW;
+    if (id >= (uint)_MaxCells) return;
+    int owner = _InfectOwnerRO[id];
+    if (owner < 0) return;
+    [loop] for (uint k = 0; k < 20u; k++)
+        _DnaProg[id * 20u + k] = _DnaProg[(uint)owner * 20u + k];
+    CellState c = _Cells[id]; c.flags &= ~DNADIRTY; _Cells[id] = c;
+}
+
+// ============================================================
+// 6. Compact
+// ============================================================
+[numthreads(64, 1, 1)]
+void Compact(uint3 dtid : SV_DispatchThreadID)
+{
+    uint id = dtid.x + dtid.y * _DispatchW;
+    if (id >= (uint)_MaxCells) return;
+    CellState c = _Cells[id];
+
+    // FREE: если ещё не в пуле — освободилась в Apply, кладём в пул. Иначе уже в пуле.
+    if (c.flags & FREE)
+    {
+        if (!(c.flags & INPOOL)) poolAdd((int)id);
+        return;
+    }
+
+    if (c.flags & ALIVE)
+    {
+        if (_Energy[id] <= 0)
+        {
+            c.flags &= ~ALIVE; c.flags |= DEAD; _Cells[id] = c;
+            _Energy[id] = _CorpseFood;    // свежий труп: стартовая питательность
+            InterlockedAdd(_Stats[5], 1); // смерть (голод/урон)
+        }
+        else
+        {
+            InterlockedAdd(_Stats[0], 1);                 // alive
+            InterlockedAdd(_Stats[3], _Energy[id]);       // totalEnergy
+            InterlockedAdd(_Stats[7], c.steps);           // totalAge
+            if (c.flags & COLONY) InterlockedAdd(_Stats[6], 1); // colony
+        }
+        return;
+    }
+    if (c.flags & DEAD)
+    {
+        int e = _Energy[id] - _FoodDecay;
+        _Energy[id] = e;
+        if (e <= 0)
+        {
+            // Труп истлёл — освобождаем в любом случае. CAS чистит слот, если труп
+            // там числится; если CAS не удался (слот уже занят другим или позиция
+            // рассинхронизировалась и слот пуст/занят чужим id) — труп всё равно
+            // уже не валиден на сетке, просто вернём клетку в пул. Иначе труп зависает
+            // навсегда (CAS каждый шаг проваливается) и пул стравливается в ноль.
+            int slot = c.y * _MaxX + c.x;
+            int prev; InterlockedCompareExchange(_Grid[slot], (int)id, -1, prev);
+            c.flags = FREE; _Cells[id] = c;   // FREE без INPOOL
+            poolAdd((int)id);                 // в пул + INPOOL
+            InterlockedAdd(_Stats[8], 1);     // освободившийся слот
+        }
+        else InterlockedAdd(_Stats[1], 1); // food
+    }
+}
+
+// ============================================================
+// 7. Spawn
+// ============================================================
+[numthreads(64, 1, 1)]
+void Spawn(uint3 dtid : SV_DispatchThreadID)
+{
+    uint id = dtid.x + dtid.y * _DispatchW;   // при 1D-диспетче dtid.y=0, id=dtid.x
+    int my; InterlockedAdd(_SpawnDone[0], 1, my);
+    if (my >= _SpawnCount) return;
+
+    int child = allocFree();
+    if (child < 0) return;
+
+    uint seed = rnd((uint)child, 31u + (uint)my);
+    [loop] for (int tries = 0; tries < 8; tries++)
+    {
+        int rx = (int)(pcg(seed + (uint)tries * 101u) % (uint)_MaxX);
+        int ry = (int)(pcg(seed + (uint)tries * 7919u) % (uint)_MaxY);
+        int slot = ry * _MaxX + rx;
+        int prev; InterlockedCompareExchange(_Grid[slot], -1, child, prev);
+        if (prev == -1)
+        {
+            CellState c = (CellState)0;
+            c.x = rx; c.y = ry; c.dir = 0; c.ip = 0; c.steps = 0; c.id = child; c.flags = ALIVE;
+            _Cells[child] = c; _Energy[child] = _InitialEnergy;
+            uint s2 = seed + 12345u;
+            [loop] for (int k = 0; k < 20; k++) _DnaProg[child * 20 + k] = pcg(s2 + (uint)k * 2654435761u);
+            _Genes[child] = pcg(s2 + 999u);
+            return;
+        }
+    }
+    markFree(child);
+}
+
+// ============================================================
+// 8. FillInstances
+// ============================================================
+[numthreads(64, 1, 1)]
+void FillInstances(uint3 dtid : SV_DispatchThreadID)
+{
+    uint id = dtid.x + dtid.y * _DispatchW;
+    float4x4 m = (float4x4)0;
+    float4 col = float4(0, 0, 0, 0);
+    if (id < (uint)_MaxCells)
+    {
+        CellState c = _CellsRO[id];
+        if ((c.flags & ALIVE) || (c.flags & DEAD))
+        {
+            m._11 = 1; m._22 = 1; m._33 = 1;
+            m._41 = c.x; m._42 = c.y; m._43 = 0; m._44 = 1;
+
+            if (c.flags & DEAD)
+            {
+                col = float4(0, 0, 0, 1);
+            }
+            else if (_ViewMode == 1) // энергия
+            {
+                float e = saturate((float)_EnergyRO[id] / 255.0);
+                col = float4(e, e, e, 1);
+            }
+            else if (_ViewMode == 2) // возраст
+            {
+                int ls = _CellLifespan > 0 ? _CellLifespan : 1000;
+                float t = saturate((float)c.steps / (float)ls);
+                // молодой (зелёный) -> старый (красный)
+                col = float4(t, 1.0 - t, 0.2, 1);
+            }
+            else if (_ViewMode == 3) // тип последнего действия
+            {
+                Intent e2 = _IntentsRO[id];
+                switch (e2.type)
+                {
+                    case 0:  col = float4(0.4, 0.4, 0.4, 1); break; // none/idle
+                    case 1:  col = float4(0.2, 0.6, 1.0, 1); break; // move
+                    case 2:  col = float4(1.0, 0.9, 0.2, 1); break; // eat
+                    case 3:  col = float4(1.0, 0.2, 0.2, 1); break; // hit
+                    case 4:  col = float4(0.2, 1.0, 0.3, 1); break; // breed
+                    case 5:  col = float4(0.1, 0.7, 0.4, 1); break; // breed colony
+                    case 6:  col = float4(0.2, 0.3, 1.0, 1); break; // transfer
+                    case 7:  col = float4(0.8, 0.2, 1.0, 1); break; // infection
+                    case 8:  col = float4(1.0, 0.5, 0.0, 1); break; // fire
+                    default: col = float4(0.5, 0.5, 0.5, 1); break;
+                }
+            }
+            else if (_ViewMode == 4) // колония
+            {
+                col = (c.flags & COLONY) ? float4(0.2, 0.4, 1.0, 1) : float4(0.3, 0.9, 0.3, 1);
+            }
+            else // _ViewMode == 0: ДНК
+            {
+                int R = 0, G = 0, B = 0;
+                [loop] for (uint z = 0; z < 5u; z++) R += (int)gbyte(id, z);
+                [loop] for (uint z = 22u; z < 26u; z++) G += (int)gbyte(id, z);
+                [loop] for (uint z = 43u; z < 47u; z++) B += (int)gbyte(id, z);
+                col = float4((R % 256) / 255.0, (G % 256) / 255.0, (B % 256) / 255.0, 1);
+            }
+        }
+    }
+    _MatBuf[id] = m;
+    _ColorBuf[id] = col;
+}

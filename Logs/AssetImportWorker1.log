@@ -1,0 +1,494 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-user" at "2026-09-20T11:57:32.5144934Z"
+Built from '6000.4/staging' branch; Version is '6000.4.6f1 (0b051c2e5d54) revision 722204'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 32295 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-20T11:57:32Z
+
+COMMAND LINE ARGUMENTS:
+F:\UnityVersions\Unity6\6000.4.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+F:/Projects/Genetic_algorithm
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+57033
+-licensingIpc
+LicenseClient-user
+-force-d3d12
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: F:/Projects/Genetic_algorithm
+F:/Projects/Genetic_algorithm
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [8768]  Target information:
+
+Player connection [8768]  * "[IP] 192.168.1.164 [Port] 0 [Flags] 2 [Guid] 1774367190 [EditorId] 1774367190 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-FR4P3RO) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [8768] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8768] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 5.22 ms, found 3 plugins.
+Initialize engine version: 6000.4.6f1 (0b051c2e5d54)
+[Subsystems] Discovering subsystems at path F:/UnityVersions/Unity6/6000.4.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/Projects/Genetic_algorithm/Assets
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4070 Ti SUPER (ID=0x2705)
+    Vendor:          NVIDIA
+    VRAM:            16061 MB
+    App VRAM Budget: 15293 MB
+    Driver:          32.0.15.9621
+Initialize mono
+Mono path[0] = 'F:/UnityVersions/Unity6/6000.4.6f1/Editor/Data/Managed'
+Mono path[1] = 'F:/UnityVersions/Unity6/6000.4.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'F:/UnityVersions/Unity6/6000.4.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56316
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-user"
+[Licensing::IpcConnector] LicenseClient-user channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-user-6000.4.6" at "2026-09-20T11:57:33.4401272Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 7908, path: "F:/UnityVersions/Unity6/6000.4.6f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              00b10926d29c4a4e867a3e4e76b6dbed
+  Correlation Id:          75eca616386acbd763d72b6b39cdc567
+  External correlation Id: 7187967216366959520
+  Machine Id:              pwsakX+KXoi6lGtO/FKY9Py0p+Y=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-user-6000.4.6" (connect: 0.00s, validation: 0.00s, handshake: 0.00s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-user-6000.4.6-notifications" at "2026-09-20T11:57:33.4456422Z"
+[Licensing::Module] Licensing Background thread has ended after 0.93s
+CodeReloadManager initialized
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/UnityVersions/Unity6/6000.4.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 10170564532217-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Register platform support module: F:/UnityVersions/Unity6/6000.4.6f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.003668 seconds.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.394 seconds
+Domain Reload Profiling: 835ms
+	BeginReloadAssembly (113ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (216ms)
+		LoadAssemblies (112ms)
+		AnalyzeDomain (205ms)
+			TypeCache.Refresh (204ms)
+				TypeCache.ScanAssembly (190ms)
+	FinalizeReload (395ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (52ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (103ms)
+			ProcessInitializeOnLoadMethodAttributes (81ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Analytics.DataPrivacy.Tests.dll at Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Analytics.StandardEvents.EditorTests.dll at Library/ScriptAssemblies/Unity.Analytics.StandardEvents.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.XR.LegacyInputHelpers.Tests.dll at Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Advertisements.Editor.Tests.dll at Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Advertisements.Tests.dll at Library/ScriptAssemblies/UnityEngine.Advertisements.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Apple.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Apple.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.AppleMacos.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.AppleMacos.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Security.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Security.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.WinRT.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.WinRT.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 2.54 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 3.74 ms, found 3 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+DisplayDialog: Error Failed to download MDR; An exception occurred during a WebClient request.
+This should not be called in batch mode.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorDialog:DisplayAlertDialogNative (string,UnityEditor.DialogIconType,string,string)
+UnityEditor.EditorDialog:DisplayAlertDialog (string,string,string,UnityEditor.DialogIconType)
+UnityEditor.EditorUtility:DisplayDialog (string,string,string)
+UnityEngine.Advertisements.Editor.MobileDependencyResolverInstallerUnity:InstallPackage () (at ./Library/PackageCache/com.unity.ads@e89225828059/Editor/Source/MobileDependencyResolverUnity.cs:114)
+UnityEngine.Advertisements.Editor.MobileDependencyResolverInstallerUnity:InstallPlayServicesResolverIfNeeded () (at ./Library/PackageCache/com.unity.ads@e89225828059/Editor/Source/MobileDependencyResolverUnity.cs:48)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+[./Library/PackageCache/com.unity.ads@e89225828059/Editor/Source/MobileDependencyResolverUnity.cs line 114]
+
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.899 seconds
+Domain Reload Profiling: 1600ms
+	BeginReloadAssembly (178ms)
+		DisableScriptedObjects (5ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (416ms)
+		LoadAssemblies (350ms)
+		AnalyzeDomain (155ms)
+			TypeCache.Refresh (112ms)
+				TypeCache.ScanAssembly (97ms)
+			BuildScriptInfoCaches (37ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (899ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			BeforeProcessingInitializeOnLoad (151ms)
+			ProcessInitializeOnLoadAttributes (307ms)
+			ProcessInitializeOnLoadMethodAttributes (274ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 2.95 ms, found 3 plugins.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3211 unused Assets / (1.4 MB). Loaded Objects now: 3773.
+Memory consumption went from 92.1 MB to 90.7 MB.
+Total: 11.831000 ms (FindLiveObjects: 0.791500 ms CreateObjectMapping: 0.520800 ms MarkObjects: 8.981500 ms  DeleteObjects: 1.533700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 688394.828045 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  importAddress: Guid(2cda990e2423bbf4892e6590ba056729) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7a7fa8019b83f1b3b1fd9b7de9832fbf') in 0.0731077 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=40366e555ea4059e3e8176dd00a42bd0 DependenciesID=9a732a265147a57cd0841b16b2aa2e50 StaticDependenciesID=e7db5a51c69cf566a14ab86383140ad8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scripts/Menu.cs
+  importAddress: Guid(f25a6d4eb9730154aa35650651a11c70) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Menu.cs using Guid(f25a6d4eb9730154aa35650651a11c70) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '226deaf559a3d033be569f44b6146462') in 0.0231448 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=696889067c8d72e69a08a42087533aaa DependenciesID=9eda7b6ae219f13630479bbb5e90fba6 StaticDependenciesID=ed1a6095cb32a2320d7690c3a48e50ed 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Folder 'Packages/com.unity.purchasing/Runtime/Apple/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Apple/UnityEngine.Purchasing.Apple.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Apple/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Apple/Unity.Purchasing.Apple.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityStub/UnityEngine.Purchasing.SecurityStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityStub/Unity.Purchasing.SecurityStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Security/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Security/Unity.Purchasing.Security.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Security/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Security/UnityEngine.Purchasing.Security.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Stores/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Stores/UnityEngine.Purchasing.Stores.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Stores/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Stores/Unity.Purchasing.Stores.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityCore/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityCore/Unity.Purchasing.SecurityCore.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityCore/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityCore/UnityEngine.Purchasing.SecurityCore.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Purchasing/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Purchasing/UnityEngine.Purchasing.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Purchasing/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Purchasing/Unity.Purchasing.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacosStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacosStub/UnityEngine.Purchasing.AppleMacosStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacosStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacosStub/Unity.Purchasing.AppleMacosStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleStub/Unity.Purchasing.AppleStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleStub/UnityEngine.Purchasing.AppleStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacos/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacos/UnityEngine.Purchasing.AppleMacos.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacos/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacos/Unity.Purchasing.AppleMacos.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Codeless/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Codeless/Unity.Purchasing.Codeless.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Codeless/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Codeless/UnityEngine.Purchasing.Codeless.asmdef)
+ArgumentException: An item with the same key has already been added. Key: 400f2260dd8d285419d1db99999109aa
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00029] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00051] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector) [0x00000] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilder.Initialize (System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00045] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilderFactory.GetOrCreate (System.String projectPath, System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00031] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.GetAssemblyGraphBuilder () [0x00026] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.SetAllScripts (System.String[] allScripts) [0x0000b] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface.SetAllScripts (System.String[] allScripts) [0x00005] in <5fef58e500dd4224983b2c076ac56b86>:0 
+
+Folder 'Packages/com.unity.purchasing/Runtime/Apple/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Apple/UnityEngine.Purchasing.Apple.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Apple/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Apple/Unity.Purchasing.Apple.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityStub/UnityEngine.Purchasing.SecurityStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityStub/Unity.Purchasing.SecurityStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Security/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Security/Unity.Purchasing.Security.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Security/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Security/UnityEngine.Purchasing.Security.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Stores/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Stores/UnityEngine.Purchasing.Stores.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Stores/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Stores/Unity.Purchasing.Stores.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityCore/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityCore/Unity.Purchasing.SecurityCore.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityCore/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityCore/UnityEngine.Purchasing.SecurityCore.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Purchasing/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Purchasing/UnityEngine.Purchasing.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Purchasing/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Purchasing/Unity.Purchasing.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacosStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacosStub/UnityEngine.Purchasing.AppleMacosStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacosStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacosStub/Unity.Purchasing.AppleMacosStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleStub/Unity.Purchasing.AppleStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleStub/UnityEngine.Purchasing.AppleStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacos/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacos/UnityEngine.Purchasing.AppleMacos.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacos/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacos/Unity.Purchasing.AppleMacos.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Codeless/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Codeless/Unity.Purchasing.Codeless.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Codeless/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Codeless/UnityEngine.Purchasing.Codeless.asmdef)
+ArgumentException: An item with the same key has already been added. Key: 400f2260dd8d285419d1db99999109aa
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00029] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00051] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector) [0x00000] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilder.Initialize (System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00045] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilderFactory.GetOrCreate (System.String projectPath, System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00031] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.GetAssemblyGraphBuilder () [0x00026] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.SetAllScripts (System.String[] allScripts) [0x0000b] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface.SetAllScripts (System.String[] allScripts) [0x00005] in <5fef58e500dd4224983b2c076ac56b86>:0 
+
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly Purchasing.Common.dll at Library/ScriptAssemblies/Purchasing.Common.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Analytics.DataPrivacy.Tests.dll at Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Analytics.StandardEvents.EditorTests.dll at Library/ScriptAssemblies/Unity.Analytics.StandardEvents.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.Apple.dll at Library/ScriptAssemblies/Unity.Purchasing.Apple.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.AppleMacos.dll at Library/ScriptAssemblies/Unity.Purchasing.AppleMacos.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.Security.dll at Library/ScriptAssemblies/Unity.Purchasing.Security.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.TransactionVerifier.dll at Library/ScriptAssemblies/Unity.Purchasing.TransactionVerifier.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.Purchasing.Authoring.dll at Library/ScriptAssemblies/UnityEditor.Purchasing.Authoring.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.Purchasing.Editor.Authoring.Core.dll at Library/ScriptAssemblies/UnityEditor.Purchasing.Editor.Authoring.Core.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.XR.LegacyInputHelpers.Tests.dll at Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Advertisements.Editor.Tests.dll at Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Advertisements.Tests.dll at Library/ScriptAssemblies/UnityEngine.Advertisements.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Apple.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Apple.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.AppleCore.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.AppleCore.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.AppleMacos.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.AppleMacos.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.AppleMacosStub.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.AppleMacosStub.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.AppleStub.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.AppleStub.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Codeless.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Security.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Security.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.SecurityCore.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.SecurityStub.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Stores.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.WinRT.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.WinRT.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.WinRTCore.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.WinRTCore.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.WinRTStub.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.WinRTStub.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Symbol file LoadedFromMemory is not a mono symbol file
+Folder 'Packages/com.unity.purchasing/Runtime/Apple/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Apple/UnityEngine.Purchasing.Apple.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Apple/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Apple/Unity.Purchasing.Apple.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityStub/UnityEngine.Purchasing.SecurityStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityStub/Unity.Purchasing.SecurityStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Security/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Security/Unity.Purchasing.Security.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Security/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Security/UnityEngine.Purchasing.Security.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Stores/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Stores/UnityEngine.Purchasing.Stores.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Stores/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Stores/Unity.Purchasing.Stores.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityCore/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityCore/Unity.Purchasing.SecurityCore.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityCore/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityCore/UnityEngine.Purchasing.SecurityCore.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Purchasing/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Purchasing/UnityEngine.Purchasing.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Purchasing/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Purchasing/Unity.Purchasing.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacosStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacosStub/UnityEngine.Purchasing.AppleMacosStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacosStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacosStub/Unity.Purchasing.AppleMacosStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleStub/Unity.Purchasing.AppleStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleStub/UnityEngine.Purchasing.AppleStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacos/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacos/UnityEngine.Purchasing.AppleMacos.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacos/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacos/Unity.Purchasing.AppleMacos.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Codeless/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Codeless/Unity.Purchasing.Codeless.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Codeless/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Codeless/UnityEngine.Purchasing.Codeless.asmdef)
+ArgumentException: An item with the same key has already been added. Key: 400f2260dd8d285419d1db99999109aa
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00029] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00051] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector) [0x00000] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilder.Initialize (System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00045] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilderFactory.GetOrCreate (System.String projectPath, System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00031] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.GetAssemblyGraphBuilder () [0x00026] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.SetAllScripts (System.String[] allScripts) [0x0000b] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface.SetAllScripts (System.String[] allScripts) [0x00005] in <5fef58e500dd4224983b2c076ac56b86>:0 
+
+Refreshing native plugins compatible for Editor in 8.13 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Folder 'Packages/com.unity.purchasing/Runtime/Apple/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Apple/UnityEngine.Purchasing.Apple.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Apple/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Apple/Unity.Purchasing.Apple.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityStub/UnityEngine.Purchasing.SecurityStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityStub/Unity.Purchasing.SecurityStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Security/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Security/Unity.Purchasing.Security.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Security/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Security/UnityEngine.Purchasing.Security.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Stores/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Stores/UnityEngine.Purchasing.Stores.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Stores/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Stores/Unity.Purchasing.Stores.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityCore/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityCore/Unity.Purchasing.SecurityCore.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/SecurityCore/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/SecurityCore/UnityEngine.Purchasing.SecurityCore.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Purchasing/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Purchasing/UnityEngine.Purchasing.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Purchasing/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Purchasing/Unity.Purchasing.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacosStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacosStub/UnityEngine.Purchasing.AppleMacosStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacosStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacosStub/Unity.Purchasing.AppleMacosStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleStub/Unity.Purchasing.AppleStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleStub/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleStub/UnityEngine.Purchasing.AppleStub.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacos/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacos/UnityEngine.Purchasing.AppleMacos.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/AppleMacos/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/AppleMacos/Unity.Purchasing.AppleMacos.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Codeless/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Codeless/Unity.Purchasing.Codeless.asmdef)
+Folder 'Packages/com.unity.purchasing/Runtime/Codeless/' contains multiple assembly definition files (Packages/com.unity.purchasing/Runtime/Codeless/UnityEngine.Purchasing.Codeless.asmdef)
+ArgumentException: An item with the same key has already been added. Key: 400f2260dd8d285419d1db99999109aa
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00029] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00051] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector) [0x00000] in <101642b95873440bbf9fec45cfcaa487>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilder.Initialize (System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00045] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilderFactory.GetOrCreate (System.String projectPath, System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00031] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.GetAssemblyGraphBuilder () [0x00026] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.SetAllScripts (System.String[] allScripts) [0x0000b] in <5fef58e500dd4224983b2c076ac56b86>:0 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface.SetAllScripts (System.String[] allScripts) [0x00005] in <5fef58e500dd4224983b2c076ac56b86>:0 
+
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+DisplayDialog: Error Failed to download MDR; An exception occurred during a WebClient request.
+This should not be called in batch mode.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorDialog:DisplayAlertDialogNative (string,UnityEditor.DialogIconType,string,string)
+UnityEditor.EditorDialog:DisplayAlertDialog (string,string,string,UnityEditor.DialogIconType)
+UnityEditor.EditorUtility:DisplayDialog (string,string,string)
+UnityEngine.Advertisements.Editor.MobileDependencyResolverInstallerUnity:InstallPackage () (at ./Library/PackageCache/com.unity.ads@e89225828059/Editor/Source/MobileDependencyResolverUnity.cs:114)
+UnityEngine.Advertisements.Editor.MobileDependencyResolverInstallerUnity:InstallPlayServicesResolverIfNeeded () (at ./Library/PackageCache/com.unity.ads@e89225828059/Editor/Source/MobileDependencyResolverUnity.cs:48)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+[./Library/PackageCache/com.unity.ads@e89225828059/Editor/Source/MobileDependencyResolverUnity.cs line 114]
+
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.699 seconds
+Domain Reload Profiling: 1364ms
+	BeginReloadAssembly (220ms)
+		DisableScriptedObjects (8ms)
+		CreateAndSetChildDomain (62ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (347ms)
+		LoadAssemblies (316ms)
+		AnalyzeDomain (129ms)
+			TypeCache.Refresh (30ms)
+				TypeCache.ScanAssembly (22ms)
+			BuildScriptInfoCaches (94ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (699ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			BeforeProcessingInitializeOnLoad (147ms)
+			ProcessInitializeOnLoadAttributes (287ms)
+			ProcessInitializeOnLoadMethodAttributes (73ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 8.94 ms, found 3 plugins.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3969 unused Assets / (0.8 MB). Loaded Objects now: 4497.
+Memory consumption went from 96.6 MB to 95.7 MB.
+Total: 6.138700 ms (FindLiveObjects: 0.459700 ms CreateObjectMapping: 0.336700 ms MarkObjects: 4.352400 ms  DeleteObjects: 0.988400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

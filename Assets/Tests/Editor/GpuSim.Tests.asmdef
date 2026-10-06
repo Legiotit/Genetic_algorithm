@@ -1,0 +1,26 @@
+{
+    "name": "GpuSim.Tests",
+    "rootNamespace": "GpuSim.Tests",
+    "references": [
+        "GpuSim",
+        "nunit.framework",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false,
+    "optionalTestPlatformValues": [
+        "EditMode"
+    ]
+}

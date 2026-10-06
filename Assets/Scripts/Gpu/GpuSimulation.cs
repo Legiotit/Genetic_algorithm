@@ -488,5 +488,157 @@ namespace GpuSim
             m.vertices = v; m.triangles = t; m.RecalculateNormals();
             return m;
         }
+
+        // ============================================================
+        // TEST API — публичные хуки для модульных тестов модели.
+        // В рантайме не используются; позволяют разместить конкретные
+        // клетки с заданной ДНК/генами, выполнить шаг и прочитать состояние.
+        // Все Test*-сеттеры нужно выставлять ДО StartSim() — их значения
+        // уходят в compute-шейдер при BindBuffers().
+        // ============================================================
+
+        public struct TestCellSpec
+        {
+            public int x, y;
+            public int dir;          // 0..7
+            public int ip;           // 0..79
+            public uint[] dna;       // 20 uint = 80 байт
+            public uint genes;
+            public int energy;
+            public uint extraFlags;  // доп. флаги (SimFlags.DEAD / SimFlags.COLONY)
+        }
+
+        // Доступ к внутренним буферам (только для чтения в тестах).
+        public ComputeBuffer CellsBuffer => _cells;
+        public ComputeBuffer EnergyBuffer => _energy;
+        public ComputeBuffer DnaBuffer => _dna;
+        public ComputeBuffer GenesBuffer => _genes;
+        public ComputeBuffer GridBuffer => _grid;
+        public ComputeBuffer FreeListBuffer => _freeList;
+        public int TestMaxCells => maxCells;
+        public int TestMaxX => maxX;
+        public int TestMaxY => maxY;
+
+        // Параметры, отсутствующие в Configure() — выставляются до StartSim().
+        public int   TestCellLifespan     { set => cellLifespan = value; }
+        public int   TestLightMode        { set => lightMode = value; }
+        public float TestLightLevel       { set => lightLevel = value; }
+        public int   TestFoodDecay        { set => foodDecay = value; }
+        public int   TestCorpseFood       { set => corpseFood = value; }
+        public int   TestTargetPopulation { set => targetPopulation = value; }
+        public bool  TestSpawnEnabled     { set => spawnEnabled = value; }
+        public bool  TestDraw             { set => draw = value; }
+
+        // Очистить поле и разместить ровно заданные клетки (id = 0..len-1);
+        // остальные слоты пула остаются свободными. Инициализирует grid,
+        // cells/energy/dna/genes/freeList/infectOwner/claim/stats.
+        public void TestSetupCells(params TestCellSpec[] cells)
+        {
+            if (!running) return;
+            int slots = maxX * maxY;
+
+            int[] grid = new int[slots];
+            for (int i = 0; i < slots; i++) grid[i] = -1;
+
+            CellState[] cs = new CellState[maxCells];
+            int[] en = new int[maxCells];
+            for (int i = 0; i < maxCells; i++) { cs[i].flags = SimFlags.FREE | SimFlags.INPOOL; cs[i].id = i; }
+
+            uint[] dna = new uint[maxCells * 20];
+            uint[] gn = new uint[maxCells];
+
+            int used = Mathf.Min(cells == null ? 0 : cells.Length, maxCells);
+            for (int k = 0; k < used; k++)
+            {
+                var spec = cells[k];
+                int slot = spec.y * maxX + spec.x;
+                if (spec.x < 0 || spec.x >= maxX || spec.y < 0 || spec.y >= maxY) continue;
+
+                grid[slot] = k;
+                cs[k].x = spec.x; cs[k].y = spec.y;
+                int d = spec.dir % 8; if (d < 0) d += 8;
+                cs[k].dir = d;
+                int ip = spec.ip % 80; if (ip < 0) ip += 80;
+                cs[k].ip = ip; cs[k].steps = 0; cs[k].id = k;
+                // DEAD-клетка — это труп (не ALIVE); прочие клетки — живые
+                // (возможно с доп. флагами, напр. COLONY).
+                uint fl = spec.extraFlags;
+                if ((fl & SimFlags.DEAD) == 0) fl |= SimFlags.ALIVE;
+                fl &= ~(SimFlags.FREE | SimFlags.INPOOL);
+                cs[k].flags = fl;
+                en[k] = spec.energy;
+                gn[k] = spec.genes;
+                if (spec.dna != null)
+                {
+                    int n = Mathf.Min(spec.dna.Length, 20);
+                    for (int j = 0; j < n; j++) dna[k * 20 + j] = spec.dna[j];
+                }
+            }
+
+            _grid.SetData(grid);
+            _cells.SetData(cs); _cellsNext.SetData(cs);
+            _energy.SetData(en); _energyNext.SetData(en);
+            _dna.SetData(dna);
+            _genes.SetData(gn);
+
+            // Free list: [0]=count, [1..]=свободные id (начиная с used).
+            int[] free = new int[maxCells + 1];
+            free[0] = maxCells - used;
+            for (int i = 0; i < free[0]; i++) free[i + 1] = used + i;
+            _freeList.SetData(free);
+
+            int[] neg = new int[maxCells];
+            for (int i = 0; i < maxCells; i++) neg[i] = -1;
+            _infectOwner.SetData(neg);
+            _claim.SetData(grid);
+            _stats.SetData(new int[9]);
+            _spawnDone.SetData(new int[1]);
+            step = 0;
+        }
+
+        // Один шаг симуляции (без отрисовки и без Update). Аналог StepOnce,
+        // но без проверки паузы — нужен только детерминированный прогон ядра.
+        public void TestStep()
+        {
+            if (!running || compute == null) return;
+            DoStep();
+        }
+
+        public CellState[] TestReadCells()
+        {
+            var arr = new CellState[maxCells];
+            _cells.GetData(arr);
+            return arr;
+        }
+
+        public int[] TestReadEnergy()
+        {
+            var arr = new int[maxCells];
+            _energy.GetData(arr);
+            return arr;
+        }
+
+        public int[] TestReadStats()
+        {
+            var arr = new int[9];
+            _stats.GetData(arr);
+            return arr;
+        }
+
+        public int[] TestReadGrid()
+        {
+            var arr = new int[maxX * maxY];
+            _grid.GetData(arr);
+            return arr;
+        }
+
+        public uint[] TestReadDna(int cellIndex)
+        {
+            var all = new uint[maxCells * 20];
+            _dna.GetData(all);
+            var res = new uint[20];
+            for (int i = 0; i < 20; i++) res[i] = all[cellIndex * 20 + i];
+            return res;
+        }
     }
 }
